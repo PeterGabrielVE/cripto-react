@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
-
-import { useState } from 'react'
 import styled from '@emotion/styled'
+import Formulario from './components/Formulario'
 import ImagenCripto from './img/imagen-criptos.png'
 
 const Heading = styled.h1`
@@ -52,6 +50,7 @@ function App() {
         />
         <div>
           <Heading>Cotiza Criptomonedas al Instante</Heading>
+          <Formulario />
         </div>
       </Contenedor>
     </>
