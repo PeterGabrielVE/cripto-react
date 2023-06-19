@@ -1,11 +1,19 @@
-import { useState } from 'react'
+/* eslint-disable no-unused-vars */
 
+import { useState } from 'react'
+import styled from '@emotion/styled'
+
+
+const Heading = styled.h1`
+            font-family: 'Lato', sans-serif;
+            color: #FFF
+` 
 
 function App() {
   
   return (
     <>
-      <h1>Desde APP</h1>
+      <Heading>Desde APP</Heading>
     </>
   )
 }
