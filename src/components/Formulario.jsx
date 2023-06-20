@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
+import Error from './Error';
 import useSelectMonedas from '../hooks/useSelectMonedas';
 import { monedas } from '../data/monedas';
 
@@ -64,7 +65,7 @@ const Formulario = () => {
 
   return (
     <>
-        {error && <p>Todos los campos son obligatorios</p>}
+        {error && <Error>Todos los campos son obligatorios</Error>}
         <form
         onSubmit={handleSubmit}
         >
