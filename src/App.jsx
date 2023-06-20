@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import styled from '@emotion/styled'
-import Formulario from './components/Formulario'
-import ImagenCripto from './img/imagen-criptos.png'
+import styled from '@emotion/styled';
+import Formulario from './components/Formulario';
+import Resultado from './components/Resultado';
+import ImagenCripto from './img/imagen-criptos.png';
 
 const Heading = styled.h1`
       font-family: 'Lato', sans-serif;
@@ -58,7 +59,7 @@ function App() {
 
           const respuesta = await fetch(url)
           const resultado = await respuesta.json()
-          console.log(resultado)
+
           setResultado(resultado.DISPLAY[criptomoneda][moneda])
 
           //setCargando(false)
@@ -80,6 +81,7 @@ function App() {
           <Formulario 
             setMonedas={setMonedas}
           />
+          {resultado.PRICE && <Resultado resultado={resultado} />} 
         </div>
       </Contenedor>
     </>
