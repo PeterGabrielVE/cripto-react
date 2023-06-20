@@ -8,11 +8,19 @@ const Label = styled.label`
     font-weight: 700;
     margin: 15px 0;
 `
-const useSelectMonedas = (label) => {
-  
+const useSelectMonedas = (label, opciones) => {
+
     const SelectMonedas = () =>(
        <>
         <Label>{label}</Label>
+        <select>
+            <option>Seleccione</option>
+            { opciones.map( opcion =>(
+                 <option key={opcion.id}
+                 value={opcion.id}
+                 >{opcion.nombre}</option>
+            ))}
+        </select>
        </>
     )
 
