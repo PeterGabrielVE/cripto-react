@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Formulario from './components/Formulario';
 import Resultado from './components/Resultado';
+import Spinner from './components/Spinner';
 import ImagenCripto from './img/imagen-criptos.png';
 
 const Heading = styled.h1`
@@ -62,7 +63,7 @@ function App() {
 
           setResultado(resultado.DISPLAY[criptomoneda][moneda])
 
-          //setCargando(false)
+          setCargando(false)
       }
 
       cotizarCripto()
@@ -81,6 +82,7 @@ function App() {
           <Formulario 
             setMonedas={setMonedas}
           />
+          {cargando && <Spinner />}
           {resultado.PRICE && <Resultado resultado={resultado} />} 
         </div>
       </Contenedor>
