@@ -58,10 +58,10 @@ function App() {
 
           const respuesta = await fetch(url)
           const resultado = await respuesta.json()
-
+          console.log(resultado)
           setResultado(resultado.DISPLAY[criptomoneda][moneda])
 
-          setCargando(false)
+          //setCargando(false)
       }
 
       cotizarCripto()
